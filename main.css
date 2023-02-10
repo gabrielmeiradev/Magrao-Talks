@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #ffffff;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Shadows Into Light', cursive;
+    backdrop-filter: blur(2px) grayscale(100%);
+    background-image: url(image/bg.png);
+    animation: background ease-in-out 10s infinite alternate;
+}
+
+@keyframes background {
+    from {background-position-x: 0;}
+    to {background-position-x: 1000px;}
+  }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* CSS */
+button {
+  font-family: 'Shadows Into Light', cursive;
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+button:focus {
+  text-decoration: none;
+}
+
+button:hover {
+  text-decoration: none;
+}
+
+button:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+button:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 12px 50px;
+  }
+}
+
+.logo{
+    position: fixed;
+    top: 20px;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+
+}
+
+footer{
+    position: fixed;
+    color: #ffffff;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100vw;
+    text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+    button{
+        font-size: 1.3rem;
+    }
+}
